@@ -1,0 +1,2 @@
+﻿Add-Migration <NAME_YOU_WANT> -Project Infrastructure
+Update-Database -Project Infrastructure
