@@ -4,16 +4,16 @@ using Services.Interfaces;
 namespace GraphQL_Demo.Schema.Queries
 {
     [ExtendObjectType("Query")]
-    public class Query
+    public class RestaurantQuery
     {
         private readonly IRestaurantService _restaurantService;
 
-        public Query(IRestaurantService restaurantService)
+        public RestaurantQuery(IRestaurantService restaurantService)
         {
             _restaurantService = restaurantService;
         }
 
-        
+        [UseFiltering]
         public async Task<IEnumerable<Restaurant>> GetRestaurants([Service] IRestaurantService restaurantService)
         {
             return await restaurantService.GetRestaurants();

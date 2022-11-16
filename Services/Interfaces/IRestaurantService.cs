@@ -8,5 +8,6 @@ namespace Services.Interfaces
         public Task<IEnumerable<Restaurant>> GetRestaurants();
         public Task<Restaurant> AddRestaurant(Restaurant restaurant);
         public Task<bool> DeleteRestaurant(Guid id);
+        public Task<Restaurant?> UpdateAsync(Guid id, Restaurant model);
     }
 }

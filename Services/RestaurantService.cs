@@ -33,5 +33,10 @@ namespace Services
         {
             return await _repository.Remove(new Restaurant{Id = id});
         }
+
+        public async Task<Restaurant?> UpdateAsync(Guid id, Restaurant model)
+        {
+            return await _repository.UpdateAsync(id, model);
+        }
     }
 }
